@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Poetry 🎂</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Georgia', 'Times New Roman', serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1d2671, #c33764);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .poetry-card {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(10px);
+      padding: 45px 35px;
+      border-radius: 24px;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+      animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 25px;
+      font-weight: normal;
+      opacity: 0.9;
+    }
+
+    .poem {
+      font-size: 1.05rem;
+      line-height: 1.9;
+      margin-bottom: 30px;
+      white-space: pre-line;
+    }
+
+    button {
+      background: #ffdde1;
+      color: #c33764;
+      border: none;
+      padding: 12px 28px;
+      font-size: 1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      font-weight: bold;
+    }
+
+    button:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .hidden-wish {
+      display: none;
+      margin-top: 25px;
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    .emoji {
+      font-size: 2rem;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="poetry-card">
+    <h1>✨ Happy Birthday ✨</h1>
+    <h2>to <span id="Gola">Gola</span></h2>
+
+    <div class="poem">
+Some friends don’t arrive loudly,
+they just stay.
+Like calm music in the background
+on days that feel heavy.
+
+You cheer quietly,
+support steadily,
+and turn confusion into clarity
+without ever asking for credit.
+    </div>
+
+    <button onclick="revealWish()">click for more gola 💌</button>
+
+    <div class="hidden-wish" id="wish">
+      And building a whole website,
+just to make my birthday special?
+That’s effort, care,
+and kindness written in code.
+
+So here’s to you, Gola —
+a sweet soul,
+a steady friend,
+and someone I truly enjoy having around.
+
+Some friendships feel easy.
+Ours is one of them. 🤍
+      <div class="emoji">🎂🌸✨</div>
+    </div>
+  </div>
+
+  <script>
+    // Customize the name here
+    document.getElementById('name').innerText = 'Your Name';
+
+    function revealWish() {
+      document.getElementById('wish').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
